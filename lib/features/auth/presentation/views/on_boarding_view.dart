@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
-import 'package:ibsra_mobile_application/core/utils/app_router.dart';
+import 'package:ibsra_mobile_application/features/auth/presentation/views/sign_up_view.dart';
+
 import '../../data/models/onboarding_page_entity.dart';
-import '../manager/on_boarding_cubit.dart';
-import '../manager/on_boarding_state.dart';
+import '../manager/on_boarding_cubit/on_boarding_cubit.dart';
+import '../manager/on_boarding_cubit/on_boarding_state.dart';
 import '../widgets/onboarding_page.dart';
 import '../widgets/page_indicator.dart';
 
@@ -62,13 +62,13 @@ class _OnboardingViewState extends State<OnboardingView> {
           actions: [
             TextButton(
               onPressed: () {
-                GoRouter.of(context).go(AppRouter.kSignUpView);
+                context.read<OnboardingCubit>().skipToEnd();
                 _pageController.animateToPage(
                   pages.length - 1,
                   duration: const Duration(milliseconds: 500),
                   curve: Curves.easeInOut,
                 );
-                // _navigateToLecture(context);
+                _navigateToLecture(context);
               },
               child: const Text(
                 'SKIP',
@@ -120,7 +120,7 @@ class _OnboardingViewState extends State<OnboardingView> {
                   FloatingActionButton(
                     onPressed: () {
                       if (state.isLastPage) {
-                        // _navigateToLecture(context);
+                        _navigateToLecture(context);
                       } else {
                         context.read<OnboardingCubit>().nextPage();
                         _pageController.nextPage(
@@ -140,15 +140,12 @@ class _OnboardingViewState extends State<OnboardingView> {
     );
   }
 
-  //   void _navigateToLecture(BuildContext context) {
-  //     Navigator.push(
-  //       context,
-  //       MaterialPageRoute(
-  //         builder: (context) => LectureView(
-  //           videoUrl: 'https://youtu.be/XC62pWvw4b0?si=2yZ_ztaP0TuNinUv',
-  //           lectureTitle: 'Learn Arabic from zero',
-  //         ),
-  //       ),
-  //     );
-  //   }
+  void _navigateToLecture(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => SignUpView(),
+      ),
+    );
+  }
 }

@@ -35,7 +35,7 @@
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../data/models/onboarding_page_entity.dart';
+import '../../../data/models/onboarding_page_entity.dart';
 import 'on_boarding_state.dart';
 
 class OnboardingCubit extends Cubit<OnboardingState> {
