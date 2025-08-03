@@ -20,9 +20,11 @@ class SignUpView extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SizedBox(height: 50,),
+                    SizedBox(
+                      height: 50,
+                    ),
                     Text(
-                      'Login',
+                      'Register',
                       style: Styles.specialTitle30,
                     ),
                     SizedBox(height: 44.0),
@@ -45,7 +47,7 @@ class SignUpView extends StatelessWidget {
                           borderRadius: BorderRadius.circular(30.0),
                         ),
                         child: Text(
-                          'Registrasi',
+                          'Register',
                           style: Styles.buttonStyle16.copyWith(
                             color: Colors.white,
                           ),
@@ -53,7 +55,7 @@ class SignUpView extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 33.0),
-                    Text('Atau login dengan'),
+                    Text('or register with'),
                     SizedBox(height: 32.0),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -66,6 +68,16 @@ class SignUpView extends StatelessWidget {
                         AuthSocialButton(
                           onPressed: () {},
                           icon: Assets.imagesPhone,
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("Already have account?"),
+                        TextButton(
+                          onPressed: () {},
+                          child: Text("Login"),
                         ),
                       ],
                     ),
