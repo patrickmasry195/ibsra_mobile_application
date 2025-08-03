@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ibsra_mobile_application/features/auth/presentation/views/sign_up_view.dart';
 
 import '../../data/models/onboarding_page_entity.dart';
-import '../manager/on_boarding_cubit.dart';
-import '../manager/on_boarding_state.dart';
+import '../manager/on_boarding_cubit/on_boarding_cubit.dart';
+import '../manager/on_boarding_cubit/on_boarding_state.dart';
 import '../widgets/onboarding_page.dart';
 import '../widgets/page_indicator.dart';
 
