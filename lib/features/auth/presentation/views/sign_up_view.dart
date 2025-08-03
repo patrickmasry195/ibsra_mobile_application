@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../../core/utils/styles.dart';
 import '../../../../generated/assets.dart';
+import '../widgets/auth_social_button.dart';
+import '../widgets/auth_text_form_field.dart';
 
 class SignUpView extends StatelessWidget {
   const SignUpView({super.key});
@@ -15,7 +18,10 @@ class SignUpView extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Login'),
+              Text(
+                'Login',
+                style: Styles.specialTitle30,
+              ),
               SizedBox(height: 44.0),
               SvgPicture.asset(Assets.imagesLockIcon),
               SizedBox(height: 48.0),
@@ -35,7 +41,10 @@ class SignUpView extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30.0),
                   ),
-                  child: Text('Registrasi'),
+                  child: Text(
+                    'Registrasi',
+                    style: Styles.buttonStyle16.copyWith(color: Colors.white),
+                  ),
                 ),
               ),
               SizedBox(height: 33.0),
@@ -57,57 +66,6 @@ class SignUpView extends StatelessWidget {
               ),
             ],
           ),
-        ),
-      ),
-    );
-  }
-}
-
-class AuthSocialButton extends StatelessWidget {
-  const AuthSocialButton({
-    super.key,
-    required this.icon,
-    required this.onPressed,
-  });
-
-  final String icon;
-  final void Function() onPressed;
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onPressed,
-      child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 23.0, vertical: 21.0),
-        decoration: BoxDecoration(
-          color: Colors.grey.shade300,
-          borderRadius: BorderRadius.circular(30.0),
-        ),
-        child: SvgPicture.asset(icon),
-      ),
-    );
-  }
-}
-
-class AuthTextFormField extends StatelessWidget {
-  const AuthTextFormField({
-    super.key,
-    required this.hintText,
-  });
-
-  final String hintText;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.grey.shade200,
-        borderRadius: BorderRadius.circular(30.0),
-      ),
-      child: TextFormField(
-        decoration: InputDecoration(
-          contentPadding: EdgeInsets.only(left: 23.0),
-          hintText: hintText,
         ),
       ),
     );
