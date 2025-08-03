@@ -19,6 +19,7 @@ class AuthTextFormField extends StatelessWidget {
       ),
       child: TextFormField(
         decoration: InputDecoration(
+          border: InputBorder.none,
           contentPadding: EdgeInsets.only(left: 23.0),
           hintText: hintText,
           hintStyle: Styles.labelStyle14,
