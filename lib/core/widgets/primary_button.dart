@@ -6,16 +6,18 @@ class PrimaryButton extends StatelessWidget {
   const PrimaryButton({
     super.key,
     required this.text,
+    this.onPressed,
   });
 
   final String text;
+  final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
       child: MaterialButton(
-        onPressed: () {},
+        onPressed: onPressed,
         height: 60.0,
         color: Colors.blue,
         elevation: 0.0,

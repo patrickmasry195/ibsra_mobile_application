@@ -63,11 +63,11 @@ class CustomTextFormField extends StatelessWidget {
           isDense: true,
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular((10)),
-            borderSide: BorderSide(color: Colors.grey[300] ?? Colors.grey!),
+            borderSide: BorderSide(color: Colors.grey[300] ?? Colors.grey),
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(borderRadius ?? 10),
-            borderSide: BorderSide(color: Colors.grey[300] ?? Colors.grey!),
+            borderSide: BorderSide(color: Colors.grey[300] ?? Colors.grey),
           ),
           // focusedErrorBorder: OutlineInputBorder(
           //   borderRadius: BorderRadius.circular(

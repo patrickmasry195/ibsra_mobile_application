@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ibsra_mobile_application/core/widgets/widgets/simple_app_bar.dart' show SimpleAppBar;

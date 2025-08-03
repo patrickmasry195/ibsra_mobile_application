@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ibsra_mobile_application/core/utils/app_router.dart';
 
 class SimpleAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
@@ -18,7 +20,7 @@ class SimpleAppBar extends StatelessWidget implements PreferredSizeWidget {
         padding: EdgeInsets.only(left: 14, bottom: 4),
         child: IconButton(
           onPressed: () {
-            Navigator.of(context).pop();
+            GoRouter.of(context).go(AppRouter.kLoginView);
           },
           icon: Icon(CupertinoIcons.back, color: Colors.blueAccent, size: 20),
         ),
