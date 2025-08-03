@@ -1,7 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:arabiciano/features/lectures/presentation/views/lecture_view.dart';
+import 'package:ibsra_mobile_application/features/auth/presentation/views/sign_up_view.dart';
 
 import '../../data/models/onboarding_page_entity.dart';
 import '../manager/on_boarding_cubit.dart';
@@ -21,17 +20,20 @@ class _OnboardingViewState extends State<OnboardingView> {
     OnboardingPageEntity(
       imagePath: 'assets/lotties/training.json',
       title: 'Welcome to Your Learning Journey',
-      description: 'Unlock knowledge anytime, anywhere. Start learning with expert courses tailored just for you!',
+      description:
+          'Unlock knowledge anytime, anywhere. Start learning with expert courses tailored just for you!',
     ),
     OnboardingPageEntity(
       imagePath: 'assets/lotties/learning2.json',
       title: 'Learn at Your Own Pace',
-      description: 'No rush, no pressure. Study when you want and track your progress effortlessly.',
+      description:
+          'No rush, no pressure. Study when you want and track your progress effortlessly.',
     ),
     OnboardingPageEntity(
       imagePath: 'assets/lotties/learning3.json',
       title: 'Achieve Your Goals',
-      description: 'Grow your skills, earn certificates, and take the next step in your career!',
+      description:
+          'Grow your skills, earn certificates, and take the next step in your career!',
     ),
   ];
 
@@ -107,7 +109,7 @@ class _OnboardingViewState extends State<OnboardingView> {
                   ),
                   const SizedBox(height: 20),
                   SizedBox(
-                    width: MediaQuery.of(context).size.width *.25,
+                    width: MediaQuery.of(context).size.width * .25,
                     child: PageIndicatorWidget(
                       boardController: _pageController,
                       pageCount: pages.length,
@@ -142,10 +144,7 @@ class _OnboardingViewState extends State<OnboardingView> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => LectureView(
-          videoUrl: 'https://youtu.be/XC62pWvw4b0?si=2yZ_ztaP0TuNinUv',
-          lectureTitle: 'Learn Arabic from zero',
-        ),
+        builder: (context) => SignUpView(),
       ),
     );
   }
