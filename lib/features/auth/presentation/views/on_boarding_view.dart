@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
+import 'package:ibsra_mobile_application/core/utils/app_router.dart';
 import 'package:ibsra_mobile_application/features/auth/presentation/views/sign_up_view.dart';
 
 import '../../data/models/onboarding_page_entity.dart';
@@ -62,7 +64,7 @@ class _OnboardingViewState extends State<OnboardingView> {
           actions: [
             TextButton(
               onPressed: () {
-                context.read<OnboardingCubit>().skipToEnd();
+                GoRouter.of(context).go(AppRouter.kSignUpView);
                 _pageController.animateToPage(
                   pages.length - 1,
                   duration: const Duration(milliseconds: 500),
