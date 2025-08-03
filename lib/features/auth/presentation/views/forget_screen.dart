@@ -38,15 +38,15 @@ class ForgetPasswordPage extends StatelessWidget {
                       fontSize: 14,
                       color: Colors.black,
                     ),
-                    "please Enter The Email And We Will Send You Otp To Reset Your Password",
+                    "please Enter The Phone Number And We Will Send You Otp To Reset Your Password",
                   ),
                 ),
                 VerticalSpace(100),
                 CustomRequiredField(
                   keyboardType: TextInputType.visiblePassword,
                   controller: TextEditingController(),
-                  title: "email",
-                  hintText: "enter Your Email Address",
+                  title: "Phone Number",
+                  hintText: "enter Your Phone Number",
                 ),
                 VerticalSpace(151),
                 AppButton(
