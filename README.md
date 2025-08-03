@@ -1,4 +1,4 @@
-# ibsra_mobile_application
+# IBSRA Mobile Application
 
 A new Flutter project.
 
