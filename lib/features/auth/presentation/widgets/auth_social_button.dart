@@ -16,6 +16,8 @@ class AuthSocialButton extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
+        height: 86,
+        width: 96,
         padding: EdgeInsets.symmetric(horizontal: 23.0, vertical: 21.0),
         decoration: BoxDecoration(
           color: Colors.grey.shade300,

@@ -5,4 +5,7 @@ class Assets {
   static const String imagesGoogleLogo = 'assets/images/google_logo.svg';
   static const String imagesLockIcon = 'assets/images/lock_icon.svg';
   static const String imagesPhone = 'assets/images/phone.svg';
+  static const String lottiesLearning2 = 'assets/lotties/learning2.json';
+  static const String lottiesLearning3 = 'assets/lotties/learning3.json';
+  static const String lottiesTraining = 'assets/lotties/training.json';
 }
