@@ -41,7 +41,7 @@ class SignUpView extends StatelessWidget {
                       child: MaterialButton(
                         onPressed: () {},
                         height: 60.0,
-                        color: Colors.blue,
+                        color: Color(0xff84CBFF),
                         elevation: 0.0,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30.0),
