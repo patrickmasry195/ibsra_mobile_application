@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
@@ -80,7 +78,9 @@ class SignUpView extends StatelessWidget {
                       children: [
                         Text("Already have account?"),
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            GoRouter.of(context).push(AppRouter.kLoginView);
+                          },
                           child: Text("Login"),
                         ),
                       ],
