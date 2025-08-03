@@ -71,7 +71,7 @@ class LoginView extends StatelessWidget {
                             GoRouter.of(context).push(AppRouter.kSignUpView);
                           },
                           child: Text(
-                            ' SignUp',
+                            '    SignUp',
                             style: Styles.linkStyle12.copyWith(
                               color: Colors.blue,
                             ),

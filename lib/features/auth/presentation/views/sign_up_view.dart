@@ -76,12 +76,20 @@ class SignUpView extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text("Already have account?"),
+                        Text(
+                          "Already have account?",
+                          style: Styles.linkStyle12,
+                        ),
                         TextButton(
                           onPressed: () {
                             GoRouter.of(context).push(AppRouter.kLoginView);
                           },
-                          child: Text("Login"),
+                          child: Text(
+                            "Login",
+                            style: Styles.linkStyle12.copyWith(
+                              color: Colors.blue,
+                            ),
+                          ),
                         ),
                       ],
                     ),
